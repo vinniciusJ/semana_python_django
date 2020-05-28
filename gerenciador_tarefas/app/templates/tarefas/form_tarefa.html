@@ -1,23 +1,26 @@
 {% extends 'base.html' %}
-
+{% load meus_filtros %}
 {% block conteudo %}
 
 <form method="post">
     <div class="form-group">
         <label>Título: </label>
-        {{form_tarefa.titulo}}
+        {{form_tarefa.titulo | addClass:'form-control'}}
     </div>
     <div class="form-group">
         <label>Descrição: </label>
-        {{form_tarefa.descricao}}
+        {{form_tarefa.descricao| addClass:'form-control'}}
     </div>
     <div class="form-group">
         <label>Data de Expiração: </label>
-        {{form_tarefa.data_expiracao}}
+        {{form_tarefa.data_expiracao| addClass:'form-control'}}
     </div>
     <div class="form-group">
         <label>Prioridade: </label>
-        {{form_tarefa.prioridade}}
+        {{form_tarefa.prioridade| addClass:'form-control'}}
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Salvar" class="btn btn-light">
     </div>
 </form>
 
