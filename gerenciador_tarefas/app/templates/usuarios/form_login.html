@@ -4,6 +4,11 @@
 
 <form method="post">
     {% csrf_token %}
+    {% for message in messages %}
+    <div class="alert alert-danger">
+        {{message}}
+    </div>
+    {% endfor %}
     <div class="form-group">
         <label>Nome de usuário: </label>
         {{ form_login.username | addClass:'form-control'}}
