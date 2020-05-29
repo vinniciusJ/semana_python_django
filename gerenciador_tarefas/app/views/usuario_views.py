@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 def cadastrar_usario(request):
     if request.method == 'POST':
@@ -13,3 +13,8 @@ def cadastrar_usario(request):
         form_usuario = UserCreationForm()
 
     return render(request, 'usuarios/form_usuario.html', {'form_usuario':form_usuario})
+
+def logar_usuario(request):
+    form_login = AuthenticationForm()
+
+    return render(request, 'usuarios/form_login.html', {'form_login' : form_login})
