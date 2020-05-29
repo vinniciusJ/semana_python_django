@@ -1,5 +1,5 @@
 class Tarefa():
-    def __index__(self, titulo, descricao, data_expiracao, prioridade):
+    def __init__(self, titulo, descricao, data_expiracao, prioridade):
         self.__titulo = titulo
         self.__descricao = descricao
         self.__data_expiracao = data_expiracao
@@ -18,15 +18,15 @@ class Tarefa():
         return self.__descricao
 
     @descricao.setter
-    def titulo(self, descricao):
-        self.__titulo = descricao
+    def descricao(self, descricao):
+        self.__descricao = descricao
 
     @property
     def data_expiracao(self):
         return self.__data_expiracao
 
     @data_expiracao.setter
-    def titulo(self, data_expiracao):
+    def data_expiracao(self, data_expiracao):
         self.__data_expiracao = data_expiracao
 
     @property
@@ -34,5 +34,5 @@ class Tarefa():
         return self.__prioridade
 
     @prioridade.setter
-    def titulo(self, prioridade):
+    def prioridade(self, prioridade):
         self.__prioridade = prioridade
